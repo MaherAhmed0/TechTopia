@@ -2,7 +2,8 @@
     --main_blue: #1842b6;
     --main_green: #26d48c;
     --background_color: #f6f6f6;
-    --main_duration: 0.3s
+    --main_duration: 0.3s;
+    --secondary_duration: 0.5s
 }
 
 * {
@@ -68,7 +69,7 @@ ul {
 }
 
 /* ----------------------------------------------------------------------------------- */
-/* Header  */
+/* Header */
 
 header {
     background-color: var(--main_blue);
@@ -180,9 +181,157 @@ header nav .menu-button {
         right: 0;
         width: 30%;
         background-color: var(--main_blue);
+        z-index: 10;
     }
 
     .links a {
         font-size: 15px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Landing */
+
+.landing {
+    background-image: url(../images/landing1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 682px;
+    position: relative;
+}
+
+.landing .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box {
+    width: 80px;
+    height: 50px;
+    background-color: var(--main_blue);
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--secondary_duration);
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-radius: 50px 0 0 50px;
+}
+
+.icon-box:hover {
+    background-color: var(--main_green);
+}
+
+.landing .overlay .text-content {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.text-content h3 {
+    color: var(--main_green);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.text-content h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.text-content h4 {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.text-content button {
+    margin: 7px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 48px;
+    border: none;
+    border-radius: 32px;
+    transition: var(--secondary_duration);
+    cursor: pointer;
+}
+
+.text-content .read-more {
+    background-color: var(--main_green);
+    color: black;
+}
+
+.text-content .read-more:hover {
+    background-color: var(--main_blue);
+    color: white;
+}
+
+.text-content .contact-us {
+    background-color: var(--main_blue);
+    color: white;
+}
+
+.text-content .contact-us:hover {
+    background-color: var(--main_green);
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .icon-box {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .text-content h2 {
+        font-size: 28px !important;
+    }
+
+    .text-content h4 {
+        font-size: 14px !important;
+    }
+
+    .text-content button {
+        font-size: 14px;
+        padding: 16px 28px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .text-content h2 {
+        font-size: 40px;
+    }
+
+    .text-content h4 {
+        font-size: 16px;
+    }
+
+    .text-content button {
+        padding: 18px 38px;
     }
 }
