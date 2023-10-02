@@ -69,6 +69,36 @@ ul {
 }
 
 /* ----------------------------------------------------------------------------------- */
+/* Components */
+
+.special-heading {
+    margin: auto;
+    text-align: center;
+    max-width: 600px;
+    padding-bottom: 48px;
+}
+
+.small-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main_blue);
+    margin-bottom: 8px;
+}
+
+.large-text {
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 1200px) {
+    .large-text {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+/* ----------------------------------------------------------------------------------- */
 /* Header */
 
 header {
@@ -301,6 +331,28 @@ header nav .menu-button {
     color: black;
 }
 
+.overlay ul {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    /* margin-bottom: 10px; */
+}
+
+.overlay ul li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: var(--main_blue);
+    transition: var(--main_duration);
+}
+
+.overlay ul li:hover {
+    background-color: var(--main_green);
+}
+
 @media (max-width: 768px) {
     .icon-box {
         width: 32px;
@@ -333,5 +385,73 @@ header nav .menu-button {
 
     .text-content button {
         padding: 18px 38px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Statistics */
+
+.statistics {
+    width: 100%;
+    background-color: var(--main_green);
+}
+
+.statistics .container {
+    display: flex;
+    padding: 48px 12px;
+}
+
+.statistics .stat-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 12px;
+    width: 25%;
+}
+
+.statistics .stat-item h2 {
+    color: var(--main_blue);
+    font-size: 40px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.statistics .stat-item h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .statistics .container {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        width: 100% !important;
+    }
+
+    .statistics .stat-item h2 {
+        font-size: 27px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .statistics .container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .stat-item {
+        width: 50% !important;
+    }
+
+    .statistics .stat-item h2 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    .statistics .stat-item h3 {
+        font-size: 20px;
+        font-weight: 600;
     }
 }
