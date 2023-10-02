@@ -1,6 +1,7 @@
 :root {
     --main_blue: #1842b6;
     --main_green: #26d48c;
+    --text-color: #787878;
     --background_color: #f6f6f6;
     --main_duration: 0.3s;
     --secondary_duration: 0.5s
@@ -88,6 +89,7 @@ ul {
 .large-text {
     font-size: 40px;
     font-weight: 600;
+    line-height: 1.2;
     color: black;
     margin-bottom: 8px;
 }
@@ -303,7 +305,7 @@ header nav .menu-button {
 .text-content button {
     margin: 7px 16px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 20px 48px;
     border: none;
     border-radius: 32px;
@@ -453,5 +455,87 @@ header nav .menu-button {
     .statistics .stat-item h3 {
         font-size: 20px;
         font-weight: 600;
+    }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* About Us */
+
+.about {
+    margin-top: 96px;
+}
+
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .images-container {
+    width: 42%;
+    height: 100%;
+    padding: 0 18px 0 0;
+    position: relative;
+}
+
+.images-container .back {
+    width: 75%;
+    margin-bottom: 25%;
+    border-radius: 8px;
+}
+
+.images-container .front-cont {
+    width: 75%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+.images-container .front-cont .front {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text-container {
+    width: 58%;
+    padding-left: 64px;
+}
+
+.special-heading {
+    text-align: left;
+    margin-bottom: -28px;
+    margin-left: 0;
+}
+
+.text-container p {
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.more-details {
+    color: white;
+    background-color: var(--main_green);
+    padding: 16px 48px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: var(--secondary_duration);
+}
+
+.more-details:hover {
+    background-color: #20c997;
+}
+
+@media (max-width: 767px) {
+    .images-container {
+        width: 100% !important;
+        margin-bottom: 28px;
+    }
+
+    .text-container {
+        width: 100%;
+        padding-left: 0px;
     }
 }
