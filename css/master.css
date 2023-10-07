@@ -76,7 +76,6 @@ ul {
     margin: auto;
     text-align: center;
     max-width: 600px;
-    padding-bottom: 48px;
 }
 
 .small-text {
@@ -338,7 +337,6 @@ header nav .menu-button {
     left: 50%;
     bottom: 0;
     transform: translate(-50%, -50%);
-    /* margin-bottom: 10px; */
 }
 
 .overlay ul li {
@@ -504,6 +502,7 @@ header nav .menu-button {
     text-align: left;
     margin-bottom: -28px;
     margin-left: 0;
+    padding-bottom: 48px;
 }
 
 .text-container p {
@@ -545,10 +544,6 @@ header nav .menu-button {
 
 .services {
     margin-top: 96px;
-}
-
-.services .special-heading {
-    padding-bottom: 0px;
 }
 
 .services-content {
@@ -655,10 +650,6 @@ header nav .menu-button {
 
 .projects {
     margin-top: 96px;
-}
-
-.projects .special-heading {
-    padding-bottom: 0px;
 }
 
 .projects-content {
@@ -776,10 +767,6 @@ header nav .menu-button {
 
 .news {
     margin-top: 96px;
-}
-
-.news .special-heading {
-    padding-bottom: 0px;
 }
 
 .blogs-content {
@@ -972,10 +959,6 @@ header nav .menu-button {
     margin-top: 96px;
 }
 
-.special-heading {
-    padding-bottom: 0px;
-}
-
 .team-content {
     display: flex;
     justify-content: center;
@@ -1080,5 +1063,75 @@ header nav .menu-button {
 @media (min-width: 992px) and (max-width: 1199px) {
     .team-content .team-item {
         width: 50%;
+    }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Testimonials */
+
+.testimonials {
+    margin-top: 96px;
+}
+
+.testimonials-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    width: calc(100% / 3);
+    padding: 24px;
+    margin-top: 48px;
+    background-color: #E3F0EB;
+    border: 1px solid #dee2e6;
+}
+
+.center-item {
+    background-color: white;
+}
+
+.testimonial-item .client {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.client-details {
+    margin-left: 22px;
+}
+
+.client-details .client-name {
+    font-size: 24px;
+    color: var(--main_green);
+    margin-bottom: 8px;
+}
+
+.client-details p {
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.client-details ul {
+    display: flex;
+    margin-top: -4px;
+}
+
+.client-details ul li {
+    color: var(--main_blue);
+    margin-right: 4px;
+}
+
+.testimonial-item hr {
+    margin: 16px 0px;
+    border: 1px solid #dee2e6
+}
+
+.testimonial-item .testimonial {
+    color: var(--text-color);
+}
+
+@media (max-width: 991px) {
+    .testimonials-content .testimonial-item {
+        width: 100%;
     }
 }
