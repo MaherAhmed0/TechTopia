@@ -934,6 +934,14 @@ header nav .menu-button {
     .share-btn {
         padding: 15px 25px;
     }
+
+    .share-btn:hover .share-icons {
+        left: 17px;
+    }
+
+    .share-icons .icon {
+        margin-right: 16px !important;
+    }
 }
 
 @media (max-width: 991px) {
